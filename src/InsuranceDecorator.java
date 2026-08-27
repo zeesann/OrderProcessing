@@ -10,12 +10,12 @@ public class InsuranceDecorator extends ShipmentDecorator {
 
     @Override public String getInfo() {
         // TODO (4c): คืน info ของตัวที่ห่อ แล้วต่อท้ายด้วย " + Insurance"
-        return /* ====== replace this ====== */ wrappedShipment.getInfo();
+        return /* ====== replace this ====== */ wrappedShipment.getInfo()  + " + Insurance" ;
     }
 
     @Override public double getCost() {
         // TODO (4d): คืน cost ของตัวที่ห่อ บวกด้วย 10% ของราคาสินค้าใน order
         //   hint: wrappedShipment.getCost() + order.getTotalPrice() * 0.10
-        return /* ====== replace this ====== */ wrappedShipment.getCost();
+        return /* ====== replace this ====== */ wrappedShipment.getCost() + order.getTotalPrice() * 0.1 ;
     }
 }
